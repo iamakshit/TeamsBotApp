@@ -1,7 +1,7 @@
 {
     "id": "2c1b6a60-a19a-4e2d-b65d-8083168c589a",
     "appId": "a490486b-5a48-4ac4-ae43-0d5916f8bb11",
-    "name": "SSOBotSample-aad",
+    "name": "ConnectCollab App-aad",
     "accessTokenAcceptedVersion": 2,
     "signInAudience": "AzureADMyOrg",
     "optionalClaims": {

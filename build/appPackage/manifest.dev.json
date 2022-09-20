@@ -15,8 +15,8 @@
         "outline": "resources/outline.png"
     },
     "name": {
-        "short": "SSOBotSample",
-        "full": "Full name for SSOBotSample"
+        "short": "ConnectCollab App",
+        "full": "App to find connections for collaborations"
     },
     "description": {
         "short": "Short description of SSOBotSample.",
