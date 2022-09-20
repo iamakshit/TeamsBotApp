@@ -1,0 +1,46 @@
+{
+    "solution": {
+        "teamsAppTenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "subscriptionId": "993d85b4-67c5-416b-9bed-ac6abf787803",
+        "subscriptionName": "Visual Studio Enterprise Subscription",
+        "tenantId": "509b9c44-8b8d-4afc-ba67-144dd850f229",
+        "needCreateResourceGroup": false,
+        "resourceGroupName": "share_now-dev-rg",
+        "location": "eastus",
+        "resourceNameSuffix": "297d87",
+        "provisionSucceeded": true
+    },
+    "fx-resource-appstudio": {
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "teamsAppId": "548dbbe0-5e75-4496-89d2-4f1da640b999",
+        "teamsAppUpdatedAt": 1663668944447
+    },
+    "fx-resource-identity": {
+        "identityName": "ssobotsampdev297d87",
+        "identityResourceId": "/subscriptions/993d85b4-67c5-416b-9bed-ac6abf787803/resourceGroups/share_now-dev-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ssobotsampdev297d87",
+        "identityClientId": "c8f05fbd-80a2-48bd-be12-a19cca561ebc"
+    },
+    "fx-resource-bot": {
+        "botId": "766048f4-2dc3-4db7-bd7f-5de31dea7d75",
+        "botPassword": "{{fx-resource-bot.botPassword}}",
+        "objectId": "4c599304-e181-4b47-9e17-76cfe9dd9cb8",
+        "skuName": "F1",
+        "siteName": "ssobotsampdev297d87bot",
+        "validDomain": "ssobotsampdev297d87bot.azurewebsites.net",
+        "appServicePlanName": "ssobotsampdev297d87bot",
+        "botWebAppResourceId": "/subscriptions/993d85b4-67c5-416b-9bed-ac6abf787803/resourceGroups/share_now-dev-rg/providers/Microsoft.Web/sites/ssobotsampdev297d87bot",
+        "siteEndpoint": "https://ssobotsampdev297d87bot.azurewebsites.net"
+    },
+    "fx-resource-aad-app-for-teams": {
+        "clientId": "a490486b-5a48-4ac4-ae43-0d5916f8bb11",
+        "clientSecret": "{{fx-resource-aad-app-for-teams.clientSecret}}",
+        "objectId": "2c1b6a60-a19a-4e2d-b65d-8083168c589a",
+        "oauth2PermissionScopeId": "e7e771fa-ca9d-4a16-ab50-d7173ed0d207",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "oauthHost": "https://login.microsoftonline.com",
+        "oauthAuthority": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "applicationIdUris": "api://botid-766048f4-2dc3-4db7-bd7f-5de31dea7d75",
+        "botId": "766048f4-2dc3-4db7-bd7f-5de31dea7d75",
+        "botEndpoint": "https://ssobotsampdev297d87bot.azurewebsites.net"
+    }
+}

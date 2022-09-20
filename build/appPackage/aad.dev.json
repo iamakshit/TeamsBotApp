@@ -1,0 +1,101 @@
+{
+    "id": "2c1b6a60-a19a-4e2d-b65d-8083168c589a",
+    "appId": "a490486b-5a48-4ac4-ae43-0d5916f8bb11",
+    "name": "SSOBotSample-aad",
+    "accessTokenAcceptedVersion": 2,
+    "signInAudience": "AzureADMyOrg",
+    "optionalClaims": {
+        "idToken": [],
+        "accessToken": [
+            {
+                "name": "idtyp",
+                "source": null,
+                "essential": false,
+                "additionalProperties": []
+            }
+        ],
+        "saml2Token": []
+    },
+    "requiredResourceAccess": [
+        {
+            "resourceAppId": "00000003-0000-0000-c000-000000000000",
+            "resourceAccess": [
+                {
+                    "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+                    "type": "Scope"
+                }
+            ]
+        }
+    ],
+    "oauth2Permissions": [
+        {
+            "adminConsentDescription": "Allows Teams to call the app's web APIs as the current user.",
+            "adminConsentDisplayName": "Teams can access app's web APIs",
+            "id": "e7e771fa-ca9d-4a16-ab50-d7173ed0d207",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Enable Teams to call this app's web APIs with the same rights that you have",
+            "userConsentDisplayName": "Teams can access app's web APIs and make requests on your behalf",
+            "value": "access_as_user"
+        }
+    ],
+    "preAuthorizedApplications": [
+        {
+            "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "00000002-0000-0ff1-ce00-000000000000",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        },
+        {
+            "appId": "4345a7b9-9a63-4910-a426-35363201d503",
+            "permissionIds": [
+                "e7e771fa-ca9d-4a16-ab50-d7173ed0d207"
+            ]
+        }
+    ],
+    "identifierUris": [
+        "api://botid-766048f4-2dc3-4db7-bd7f-5de31dea7d75"
+    ],
+    "replyUrlsWithType": [
+        {
+            "url": "https://ssobotsampdev297d87bot.azurewebsites.net/auth-end.html",
+            "type": "Web"
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.9",
+    "version": "1.0.0",
+    "id": "548dbbe0-5e75-4496-89d2-4f1da640b999",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/index.html#/privacy",
+        "termsOfUseUrl": "https://www.example.com/index.html#/termsofuse"
+    },
+    "icons": {
+        "color": "resources/color.png",
+        "outline": "resources/outline.png"
+    },
+    "name": {
+        "short": "SSOBotSample",
+        "full": "Full name for SSOBotSample"
+    },
+    "description": {
+        "short": "Short description of SSOBotSample.",
+        "full": "Full description of SSOBotSample."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "766048f4-2dc3-4db7-bd7f-5de31dea7d75",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "welcome",
+                            "description": "Resend welcome card of this Bot"
+                        },
+                        {
+                            "title": "learn",
+                            "description": "Learn about Adaptive Card and Bot Command"
+                        },
+                        {
+                            "title": "show",
+                            "description": "Show user profile by calling Microsoft Graph API with SSO"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "ssobotsampdev297d87bot.azurewebsites.net"
+    ],
+    "webApplicationInfo": {
+        "id": "a490486b-5a48-4ac4-ae43-0d5916f8bb11",
+        "resource": "api://botid-766048f4-2dc3-4db7-bd7f-5de31dea7d75"
+    }
+}
