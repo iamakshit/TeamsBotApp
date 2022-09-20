@@ -13,12 +13,18 @@
     "fx-resource-appstudio": {
         "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
         "teamsAppId": "548dbbe0-5e75-4496-89d2-4f1da640b999",
-        "teamsAppUpdatedAt": 1663668944447
+        "teamsAppUpdatedAt": 1663691818973
     },
     "fx-resource-identity": {
         "identityName": "ssobotsampdev297d87",
         "identityResourceId": "/subscriptions/993d85b4-67c5-416b-9bed-ac6abf787803/resourceGroups/share_now-dev-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ssobotsampdev297d87",
         "identityClientId": "c8f05fbd-80a2-48bd-be12-a19cca561ebc"
+    },
+    "fx-resource-azure-sql": {
+        "admin": "hack",
+        "sqlResourceId": "/subscriptions/993d85b4-67c5-416b-9bed-ac6abf787803/resourceGroups/share_now-dev-rg/providers/Microsoft.Sql/servers/hackteamsbot",
+        "sqlEndpoint": "hackteamsbot.database.windows.net",
+        "databaseName": "hackteamsbot"
     },
     "fx-resource-bot": {
         "botId": "766048f4-2dc3-4db7-bd7f-5de31dea7d75",
