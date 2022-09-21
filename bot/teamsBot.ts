@@ -12,6 +12,7 @@ import {
 import { Utils } from "./helpers/utils";
 import { SSODialog } from "./helpers/ssoDialog";
 import { CommandsHelper } from "./helpers/commandHelper";
+import { executeQuery, getSQLConnection } from './helpers/common';
 const rawWelcomeCard = require("./adaptiveCards/welcome.json");
 const rawLearnCard = require("./adaptiveCards/learn.json");
 
@@ -86,6 +87,20 @@ export class TeamsBot extends TeamsActivityHandler {
   ): Promise<AdaptiveCardInvokeResponse> {
     // The verb "userlike" is sent from the Adaptive Card defined in adaptiveCards/learn.json
     if (invokeValue.action.verb === "userlike") {
+      let connection = await getSQLConnection();
+     /* try
+      {
+        let sqlQuery = `SELECT count(*) FROM [dbo].[User]`;
+        var result = await executeQuery(sqlQuery, connection);
+        console.log("Show some results");
+        console.log(result);
+      } catch (error)
+      {
+        console.log(error);
+        throw error;
+      } finally
+      {
+      }*/
       this.likeCountObj.likeCount++;
       const card = Utils.renderAdaptiveCard(rawLearnCard, this.likeCountObj);
       await context.updateActivity({
