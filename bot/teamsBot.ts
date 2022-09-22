@@ -14,9 +14,11 @@ import { SSODialog } from "./helpers/ssoDialog";
 import { CommandsHelper } from "./helpers/commandHelper";
 const rawWelcomeCard = require("./adaptiveCards/welcome.json");
 const rawLearnCard = require("./adaptiveCards/learn.json");
+const rawLearnCard2 = require("./adaptiveCards/learn2.json");
+const rawLearnCard3 = require("./adaptiveCards/learn3.json");
 
 export class TeamsBot extends TeamsActivityHandler {
-  likeCountObj: { likeCount: number };
+  likeCountObj: { likeCount: number, likeCount2:number, likeCount3: number };
   conversationState: BotState;
   userState: BotState;
   dialog: SSODialog;
@@ -27,7 +29,7 @@ export class TeamsBot extends TeamsActivityHandler {
     super();
 
     // record the likeCount
-    this.likeCountObj = { likeCount: 0 };
+    this.likeCountObj = { likeCount: 0, likeCount2: 1, likeCount3: 5 };
 
     // Define the state store for your bot.
     // See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
@@ -59,6 +61,9 @@ export class TeamsBot extends TeamsActivityHandler {
         ssoDialog: this.dialog,
         dialogState: this.dialogState,
         likeCount: this.likeCountObj,
+        likeCount2: this.likeCountObj,
+        likeCount3: this.likeCountObj,
+
       });
 
       // By calling next() you ensure that the next BotHandler is run.
@@ -88,6 +93,28 @@ export class TeamsBot extends TeamsActivityHandler {
     if (invokeValue.action.verb === "userlike") {
       this.likeCountObj.likeCount++;
       const card = Utils.renderAdaptiveCard(rawLearnCard, this.likeCountObj);
+      await context.updateActivity({
+        type: "message",
+        id: context.activity.replyToId,
+        attachments: [card],
+      });
+      return { statusCode: 200, type: undefined, value: undefined };
+    }
+
+    if (invokeValue.action.verb === "userlike2") {
+      this.likeCountObj.likeCount2++;
+      const card = Utils.renderAdaptiveCard(rawLearnCard2, this.likeCountObj);
+      await context.updateActivity({
+        type: "message",
+        id: context.activity.replyToId,
+        attachments: [card],
+      });
+      return { statusCode: 200, type: undefined, value: undefined };
+    }
+
+    if (invokeValue.action.verb === "userlike3") {
+      this.likeCountObj.likeCount3++;
+      const card = Utils.renderAdaptiveCard(rawLearnCard3, this.likeCountObj);
       await context.updateActivity({
         type: "message",
         id: context.activity.replyToId,
