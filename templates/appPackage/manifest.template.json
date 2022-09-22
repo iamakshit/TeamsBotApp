@@ -52,6 +52,10 @@
                         {
                             "title": "show",
                             "description": "Show user profile by calling Microsoft Graph API with SSO"
+                        },
+                        {
+                            "title": "post",
+                            "description": "Make a post"
                         }
                     ]
                 }

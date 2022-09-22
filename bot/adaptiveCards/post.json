@@ -1,0 +1,88 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+      {
+          "type": "TextBlock",
+          "size": "Medium",
+          "weight": "Bolder",
+          "text": "Learn Adaptive Card and Commands. Changes by Akshit"
+      },
+      {
+          "type": "TextBlock",
+          "text": "Now you have triggered a command that sends this card! Go to documentations to learn more about Adaptive Card and Commands in Teams Bot. Click on \"I like this\" below if you think this is helpful.",
+          "wrap": true
+      },
+      {
+          "id": "2321",
+          "type": "Input.Text",
+          "placeholder": "Please enter Subject",
+          "isMultiline": false
+      },
+      {
+          "id": "232",
+          "type": "Input.Text",
+          "placeholder": "Please enter Details",
+          "isMultiline": true
+      },
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "items": [
+                      {
+                          "id": "232gSubstrate",
+                          "type": "TextBlock",
+                          "text": "Select the interest",
+                          "wrap": true
+                      }
+                  ],
+                  "width": "auto"
+              },
+              {
+                  "type": "Column",
+                  "items": [
+                      {
+                          "id": "232adRandom",
+                          "type": "Input.ChoiceSet",
+                          "title": "Random",
+                          "choices": [
+                              {
+                                  "title": "Substrate",
+                                  "value": "Substrate"
+                              },
+                              {
+                                  "title": "Random",
+                                  "value": "Random"
+                              },
+                              {
+                                  "title": "Tech",
+                                  "value": "Tech"
+                              },
+                              {
+                                  "title": "Accomodation",
+                                  "value": "Accomodation"
+                              },
+                              {
+                                  "title": "Hello",
+                                  "value": "Hello"
+                              }
+                          ]
+                      }
+                  ],
+                  "width": "auto"
+              }
+          ]
+      }
+  ],
+  "actions": [
+      {
+          "type": "Action.Execute",
+          "title": "Submit",
+          "verb": "submitPost",
+          "fallback": "Action.Submit"
+      }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5"
+}

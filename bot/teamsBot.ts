@@ -16,6 +16,7 @@ const rawWelcomeCard = require("./adaptiveCards/welcome.json");
 const rawLearnCard = require("./adaptiveCards/learn.json");
 const rawLearnCard2 = require("./adaptiveCards/learn2.json");
 const rawLearnCard3 = require("./adaptiveCards/learn3.json");
+const postCard = require("./adaptiveCards/post.json");
 
 export class TeamsBot extends TeamsActivityHandler {
   likeCountObj: { likeCount: number, likeCount2:number, likeCount3: number };
@@ -108,6 +109,17 @@ export class TeamsBot extends TeamsActivityHandler {
         type: "message",
         id: context.activity.replyToId,
         attachments: [card],
+      });
+      return { statusCode: 200, type: undefined, value: undefined };
+    }
+
+    if (invokeValue.action.verb === "submitPost") {
+      this.likeCountObj.likeCount2=0;
+      const postCard = Utils.renderAdaptiveCard(rawLearnCard3,this.likeCountObj);
+      await context.updateActivity({
+        type: "message",
+        id: context.activity.replyToId,
+        attachments: [postCard],
       });
       return { statusCode: 200, type: undefined, value: undefined };
     }
